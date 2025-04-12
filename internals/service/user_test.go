@@ -14,7 +14,7 @@ func TestGetUser_Sucesso(t *testing.T) {
 	mockResponse := `{
 		"id": 1,
 		"name": "Breno",
-		"email": "breno@example.com",
+		"email": "brenodev@dominioqualquer.com",
 		"phone": "40028922",
 		"address": {
 			"street": "Rua de baixo",

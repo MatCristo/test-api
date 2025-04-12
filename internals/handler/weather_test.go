@@ -13,7 +13,7 @@ func TestNewWeatherHandler_Sucesso(t *testing.T) {
 	mockServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		query := r.URL.Query()
 		if query.Get("q") != "Serra" {
-			t.Errorf("esperava cidade=Serra, obteve %s", query.Get("q"))
+			t.Errorf("esperava city=Serra, obteve %s", query.Get("q"))
 		}
 
 		w.Header().Set("Content-Type", "application/json")
@@ -36,7 +36,7 @@ func TestNewWeatherHandler_Sucesso(t *testing.T) {
 
 	os.Setenv("OPENWEATHER_API_KEY", "fake-key")
 
-	req := httptest.NewRequest(http.MethodGet, "/weather?cidade=Serra", nil)
+	req := httptest.NewRequest(http.MethodGet, "/weather?city=Serra", nil)
 	rec := httptest.NewRecorder()
 
 	handler := WeatherHandler(client)
