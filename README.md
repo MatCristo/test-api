@@ -3,6 +3,7 @@ Teste de consumo de API para testar minhas habilidades com golang
 API utilizadas foram:
 
 https://openweathermap.org/
+ 
 https://jsonplaceholder.typicode.com
 
 ex.
